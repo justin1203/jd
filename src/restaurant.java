@@ -35,13 +35,18 @@ public class restaurant {
 				bill.addItem(order-1);
 				System.out.println("You selected " + menu.getMenu()[order-1].getName());
 			}
-			if (choice == 2){
+			else if (choice == 2){
 				bill.displayBill();
 			}
-			if (choice == 3){
+			else if (choice == 3){
+				double payment;
+				double difference;//amount paid - remaining amount
+				System.out.println("How much are you putting towards your bill?");
+				payment = scan.nextDouble();
 				
+				difference = payment - bill.getTotal();
 			}
-			if (choice == 4){
+			else if (choice == 4){
 				
 			}
 		}
