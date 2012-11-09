@@ -40,11 +40,20 @@ public class restaurant {
 			}
 			else if (choice == 3){
 				double payment;
-				double difference;//amount paid - remaining amount
-				System.out.println("How much are you putting towards your bill?");
-				payment = scan.nextDouble();
+				double difference = 0;//amount paid - remaining amount
+				double total = bill.getTotal();
+				do{
+					if(difference < 0)
+						System.out.println("You still have some money to pay");
+					System.out.println("How much are you putting towards your bill?");
+					payment = scan.nextDouble();
 				
-				difference = payment - bill.getTotal();
+					difference = payment - total;
+					total -= payment;
+				} while(difference < 0);
+				
+				System.out.println("The difference of what you paid and the total is given to the waiter as a tip");
+				myWaiter.addTip(difference);
 			}
 			else if (choice == 4){
 				
