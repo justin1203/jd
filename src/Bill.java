@@ -11,6 +11,7 @@ public class Bill {
 	private double total = 0;
 	private int count = 0;
 	private List<MenuItem> myList = new ArrayList<MenuItem>();
+	Waiter waiter = new Waiter();
 	Menu m = new Menu();
 
 	public void addItem(int iNum){
@@ -32,7 +33,7 @@ public class Bill {
 		System.out.println("TOTAL(before tax): $" + total);
 		System.out.println("TOTAL: $" + (total + total*HST));
 	}
-	
+
 	public double getTotal(){
 		return total;
 	}
