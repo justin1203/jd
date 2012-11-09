@@ -1,17 +1,18 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.text.DecimalFormat;
 
 
 public class Bill {
-	
+
 	public Bill(){}
-	
+
 	final double HST = .12;//The Harmonized sales tax
+	DecimalFormat df = new DecimalFormat("#.##");
 
 	private double total = 0;
 	private int count = 0;
 	private List<MenuItem> myList = new ArrayList<MenuItem>();
-	Waiter waiter = new Waiter();
 	Menu m = new Menu();
 
 	public void addItem(int iNum){
@@ -21,7 +22,7 @@ public class Bill {
 
 	public void sum(){
 		for(int i=0;i<count;i++){
-			total += myList.get(count).getPrice();
+			total += myList.get(i).getPrice();
 		}
 	}
 
@@ -31,11 +32,10 @@ public class Bill {
 		}
 		sum();
 		System.out.println("TOTAL(before tax): $" + total);
-		System.out.println("TOTAL: $" + (total + total*HST));
+		System.out.println("TOTAL: $" + df.format(total + total*HST));
 	}
 
 	public double getTotal(){
 		return total;
 	}
 }
-
