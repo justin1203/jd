@@ -24,6 +24,8 @@ public class restaurant {
 				myWaiter = John;
 			else
 				myWaiter = Alfred;
+			
+			
 		}
 	}
 }

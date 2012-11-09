@@ -22,4 +22,11 @@ public class Menu {
 		return menu;
 	}
 	
+	public void printMenu(){
+		System.out.println("Menu: ");
+		for(int i = 0; i < menu.length; i ++){
+			System.out.println(menu[i].getName() + " $" + menu[0].getPrice());
+		}
+	}
+	
 }

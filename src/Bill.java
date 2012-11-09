@@ -26,9 +26,11 @@ public class Bill {
 
 	public void displayBill(){
 		for(int i = 0; i < myList.size(); i++){
-			sum += myList.get(i).getPrice();
 			System.out.println((myList.get(i)).getName() + ": $" + (myList.get(i).getPrice()));
 		}
+		sum();
+		System.out.println("TOTAL(before tax): $" + total);
+		System.out.println("TOTAL: $" + (total + total*HST));
 	}
 	
 	
