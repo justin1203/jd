@@ -4,16 +4,24 @@ import java.util.List;
 
 public class Bill {
 	
-	List myList = new ArrayList();
-
-	public void addItem(MenuItem iName){
-		
-	}
+	public Bill(){}
 	
+	final double HST = .12;//The Harmonized sales tax
+
+	private List<MenuItem> myList = new ArrayList<MenuItem>();
+	Menu m = new Menu();
+
+	public void addItem(int iNum){
+		myList.add(m.menu[iNum]);
+	}
+
 	public void displayBill(){
 		for(int i = 0; i < myList.size(); i++){
-			System.out.println((myList.get(i)).name + ": $" + (myList.get(i).price));
+			sum += myList.get(i).getPrice();
+			System.out.println((myList.get(i)).getName() + ": $" + (myList.get(i).getPrice()));
 		}
 	}
 	
+	
 }
+
