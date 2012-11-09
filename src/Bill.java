@@ -1,7 +1,7 @@
 
 public class Bill {
 	
-	public void addItem(String iName){
+	public void addItem(MenuItem iName){
 		
 	}
 	

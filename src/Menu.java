@@ -5,6 +5,8 @@
  */
 public class Menu {
 	MenuItem[] menu;
+	MenuItem iName;
+	Bill currentBill = new Bill();
 	public Menu(){
 		menu = new MenuItem[10];
 		menu[0] = new MenuItem("Chicken Fries", 10.21);
@@ -16,6 +18,15 @@ public class Menu {
 		menu[7] = new MenuItem("Dumplings", 6.38);
 		menu[8] = new MenuItem("Calamari", 12.99);
 		menu[9] = new MenuItem("Pork Chops", .12);
+	}
+	
+	public MenuItem[] getMenu(){
+		return menu;
+	}
+	
+	public void chooseItem(MenuItem iName) {
+		this.iName = iName;
+		currentBill.addItem(iName);
 	}
 	
 }
