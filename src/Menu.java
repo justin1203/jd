@@ -5,7 +5,6 @@
  */
 public class Menu {
 	MenuItem[] menu;
-	MenuItem iName;
 	Bill currentBill = new Bill();
 	public Menu(){
 		menu = new MenuItem[10];
@@ -24,9 +23,8 @@ public class Menu {
 		return menu;
 	}
 	
-	public void chooseItem(MenuItem iName) {
-		this.iName = iName;
-		currentBill.addItem(iName);
+	public void chooseItem(int iNum) {
+		currentBill.addItem(iNum);
 	}
 	
 }

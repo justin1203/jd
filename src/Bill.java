@@ -3,11 +3,11 @@ import java.util.List;
 
 
 public class Bill {
-	
-	List myList = new ArrayList();
 
-	public void addItem(MenuItem iName){
-		
+	private List<MenuItem> myList = new ArrayList<MenuItem>();
+	Menu m = new Menu();
+
+	public void addItem(int iNum){
+		myList.add(m.menu[iNum]);
 	}
-	
 }
