@@ -8,7 +8,7 @@ public class Waiter {
 		name = n;
 		tips = 0;//Initially the waiter has 0 tips
 	}
-	
+
 	//Get the waiter's name
 	public String getName(){
 		return name;
