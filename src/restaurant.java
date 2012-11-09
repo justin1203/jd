@@ -12,10 +12,12 @@ public class restaurant {
 		Random rand = new Random();
 		Waiter John = new Waiter();
 		Waiter Alfred = new Waiter();
+		Menu menu = new Menu();
 		
 		
 		int choice = 1;
 		while(choice >= 1){
+			menu.printMenu();
 			int num = rand.nextInt(2);
 			Waiter myWaiter;
 			if(num == 0)
