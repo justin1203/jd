@@ -14,7 +14,6 @@ public class restaurant {
 		Waiter Alfred = new Waiter();
 		Menu menu = new Menu();
 		Bill bill = new Bill();
-
 		int choice = 0;
 		int order = 0;
 		while(choice != 4){
@@ -51,12 +50,10 @@ public class restaurant {
 					difference = payment - total;
 					total -= payment;
 				} while(difference < 0);
-				
 				System.out.println("The difference of what you paid and the total is given to the waiter as a tip");
 				myWaiter.addTip(difference);
 			}
 			else if (choice == 4){
-				
 			}
 		}
 	}
