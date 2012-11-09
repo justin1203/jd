@@ -33,6 +33,9 @@ public class Bill {
 		System.out.println("TOTAL(before tax): $" + total);
 		System.out.println("TOTAL: $" + (total + total*HST));
 	}
-	
+
+	public double getTotal(){
+		return total;
+	}
 }
 

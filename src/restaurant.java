@@ -35,13 +35,27 @@ public class restaurant {
 				bill.addItem(order-1);
 				System.out.println("You selected " + menu.getMenu()[order-1].getName());
 			}
-			if (choice == 2){
+			else if (choice == 2){
 				bill.displayBill();
 			}
-			if (choice == 3){
+			else if (choice == 3){
+				double payment;
+				double difference = 0;//amount paid - remaining amount
+				double total = bill.getTotal();
+				do{
+					if(difference < 0)
+						System.out.println("You still have some money to pay");
+					System.out.println("How much are you putting towards your bill?");
+					payment = scan.nextDouble();
 				
+					difference = payment - total;
+					total -= payment;
+				} while(difference < 0);
+				
+				System.out.println("The difference of what you paid and the total is given to the waiter as a tip");
+				myWaiter.addTip(difference);
 			}
-			if (choice == 4){
+			else if (choice == 4){
 				
 			}
 		}
