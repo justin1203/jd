@@ -36,6 +36,7 @@ public class Bill {
 	}
 
 	public double getTotal(){
+		
 		return total;
 	}
 }
